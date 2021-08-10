@@ -1,7 +1,10 @@
-# https://github.com/jcontini/google-keep-csv
+# derived from https://github.com/jcontini/google-keep-csv
 # keep notes extracted using Google Takeout
 
-# this processes the json files to get the first nntation description
+# this processes the json files to get the first annotation description
+# and add it to the contents
+
+# handles utf8 filenames
 
 #!/usr/bin/env python
 # coding: utf-8
