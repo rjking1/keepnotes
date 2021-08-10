@@ -3,6 +3,7 @@
 
 # this processes the json files to get the first annotation description
 # and add it to the contents
+# writes a category column with static text "keep"
 
 # handles utf8 filenames
 
@@ -38,8 +39,7 @@ with open(csvout, "w", encoding='utf8') as f:
             content = j["annotations"][0]["description"] + \
                 " <a href='" + url + "'>" + url + '</a>'
 
-            note = {"date": xlDate, "title": title, "content": content} # , "description": desc}
-            # , note["description"]
+            note = {"date": xlDate, "title": title, "content": content} 
             writer.writerow(
                 [file, note["date"], note["title"], note["content"], "keep"])
         except:
